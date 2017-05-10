@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/style2.css">
+  <title>MY APP</title>
+</head>
+<body>
+
+
+
+<h1>Movies</h1>
+
+<a class="btn" href="/movies">Dashboard</a>
+<a class="btn" href="/movies/add">add a movie</a>
+
+<br><br><br>
+
+
+<div class="movies">
+  <table class="rwd-table">
+          <tr>
+            <th>title</th>
+            <th>release year</th>
+            <th>director</th>
+            <th>genre</th>
+            <th></th>
+            <th></th>
+          </tr>
+
+  <% for(var i=0; i<movies.length; i++) {%>
+    
+          <tr>
+            <td><%= movies[i].title %></td>
+            <td><%= movies[i].releaseYear %></td>
+            <td><%= movies[i].director %></td>
+            <td><%= movies[i].genre %></td>
+            <td><a class="btn" href="/delete/<%= movies[i].id %>">delete</a></td>
+            <td><a class="btn" href="/movies/edit/<%= movies[i].id %>">edit</a></td>
+          </tr>
+        
+  <% } %>
+
+  </table>
+</div>
+
+  
+
+
+
+
+
+</body>
+</html>
+

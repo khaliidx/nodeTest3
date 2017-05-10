@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+<h2>Edit Movie</h2>
+
+<a class="btn" href="/movies">Dashboard</a>
+
+<br><br><br>  
+<div class="movie">
+   
+        <form method="post" action="/edit/<%= movie.id %>">
+        <table>
+          <tr><td>name : </td><td> <input type="text" name="title" value="<%= movie.title%>"></td></tr>
+          <tr><td>release year : </td><td><input type="text" name="releaseYear" value="<%= movie.releaseYear%>"></td></tr>
+          <tr><td>director : </td><td><input type="text" name="director" value="<%= movie.director%>"></td></tr>
+          <tr><td>genre : </td><td><span><input type="text" name="genre" value="<%= movie.genre%>"></span></td></tr>
+          <tr><td></td><td><input type="submit" value="edit"></td></tr>
+        </table>
+       </form>
+
+    <br>
+</div>
+
+  
+
+
+
+
+
+</body>
+</html>
